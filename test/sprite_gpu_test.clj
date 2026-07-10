@@ -2,7 +2,7 @@
   "Tests for 2D-as-GPU-instances: the sprite-primitive → quad-instance converter, and that the
    2D-SDF sprite shader generates valid WGSL (validated by naga = wgpu's frontend, separately)."
   (:require [clojure.test :refer [deftest is]]
-            [kotoba.sprite-gpu :as sg]))
+            [kami.sprite-gpu :as sg]))
 
 (deftest primitive-to-quad
   (is (= {:pos [10.0 20.0] :size [185 185] :rot 0.0 :shape 0 :color [0.3 0.2 0.1 1.0]}
